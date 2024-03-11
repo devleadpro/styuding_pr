@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="static">блок статик</div>
+    <div class="static">блок статик с абсолютным <div class="static_child">ребенком</div></div>
+    <div class="relative big red underline">блок relativew</div>
+    <div class="relative">блок relatove с абсолютным <div class="static_child">ребенком</div></div>
+    <div class="fixed">блок fixed с fixed <div class="fixed_child">ребенком</div></div>
+    <div>
+        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38.936 0H6.06388C2.71496 0 0 2.71483 0 6.06384V38.9359C0 42.2849 2.71485 44.9998 6.06388 44.9998H22.2763L22.3039 28.9193H18.1262C17.5832 28.9193 17.1426 28.4803 17.1405 27.9374L17.1204 22.754C17.1183 22.2081 17.5603 21.7644 18.1062 21.7644H22.2764V16.7559C22.2764 10.9436 25.8262 7.7788 31.0112 7.7788H35.2659C35.8102 7.7788 36.2516 8.22012 36.2516 8.76458V13.1353C36.2516 13.6795 35.8105 14.1207 35.2664 14.121L32.6554 14.1222C29.8356 14.1222 29.2896 15.4622 29.2896 17.4285V21.7645H35.4856C36.076 21.7645 36.534 22.2801 36.4644 22.8664L35.8501 28.0498C35.7913 28.5458 35.3707 28.9195 34.8712 28.9195H29.3172L29.2896 45H38.9362C42.2852 45 45 42.2852 45 38.9363V6.06384C44.9999 2.71483 42.285 0 38.936 0Z" fill="#7B7B7B"/>
+        </svg>
+    </div>
+    <div>
+        <svg width="210" height="222" viewBox="0 0 210 222" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M210 0H0V222H210V0ZM96.5 177C129.361 177 156 150.361 156 117.5C156 84.639 129.361 58 96.5 58C63.6391 58 37 84.639 37 117.5C37 150.361 63.6391 177 96.5 177Z" fill="#D9D9D9"/>
+        </svg>
+            
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div {
+            border:1px solid;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px 10px 10% 100px;
+        }
+        .static{
+            /* position: static */
+            box-shadow: inset 5px 10px 15px 20px rgba(0,0,0,0.5), 
+                        5px 10px 15px 20px rgba(0,0,0,0.5);
+
+        }
+        .relative{
+            position: relative;
+        }
+        .relative.underline{
+            /* 020 */
+            color: red;
+        }
+        .relative.red::selection {
+            /* 020 */
+            color: yellow;
+        }
+        .relative.big{
+            /* 020 */
+            color: green;
+        }
+        .static_child{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .fixed{
+            position: fixed;
+            left: 0; top:0;
+        }
+        .fixed_child{
+            position: fixed;
+            bottom: 0; left:0;
+        }
+    </style>
+</body>
+</html>
